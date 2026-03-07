@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://blj662s0vna7p"]
+
+[ext_resource type="Texture2D" uid="uid://6dma4lsfialp" path="res://core/wcircle.png" id="1_mdl8m"]
+
+[node name="Core" type="Node2D" unique_id=72824533]
+
+[node name="Wcircle" type="Sprite2D" parent="." unique_id=673956422]
+scale = Vector2(0.04375, 0.04375)
+texture = ExtResource("1_mdl8m")
