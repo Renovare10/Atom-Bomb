@@ -3,11 +3,24 @@ extends Node2D
 @export var energy_ball_scene: PackedScene
 @export var spawn_rate: float = 0.4 # Seconds
 
-# Called when the node enters the scene tree for the first time.
+@onready var timer: Timer = Timer.new()
+
 func _ready() -> void:
-	pass # Replace with function body.
+	add_child(timer)
+	timer.timeout.connect(_spawn_energy_ball)
+	timer.start(spawn_rate)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _spawn_energy_ball() -> void:
+	var ball = energy_ball_scene.instantiate() as Area2D
+	add_child(ball)
+	ball.global_position = global_position
+	
+	# Random direction
+	var angle = randf_range(0, TAU)
+	var direction = Vector2(cos(angle), sin(angle))
+	
+	ball.launch(direction)
+	
+	timer.start(spawn_rate)
+	

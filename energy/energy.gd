@@ -6,7 +6,7 @@ extends Area2D
 var velocity: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
-	pass
+	$lifetime_timer.timeout.connect(queue_free)
 
 
 func _physics_process(delta: float) -> void:

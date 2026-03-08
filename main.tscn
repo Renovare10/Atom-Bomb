@@ -2,13 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://blj662s0vna7p" path="res://core/core.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cfsqgpoc4c43v" path="res://ui/camera.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://bsuv4vuyjy4nq" path="res://energy/energy.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=866761514]
 
 [node name="Camera" parent="." unique_id=1392341737 instance=ExtResource("2_0xm2m")]
 
 [node name="Core" parent="." unique_id=72824533 instance=ExtResource("1_ig7tw")]
-
-[node name="Energy" parent="." unique_id=310349823 instance=ExtResource("3_h2yge")]
-position = Vector2(51, -1)
