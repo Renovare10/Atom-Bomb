@@ -1,7 +1,7 @@
 extends Node
 
 signal particles_selected(selected: Array[Node2D])
-@export var selection_box_path: NodePath = "../SelectionLayer/SelectionBox"
+@export var selection_box_path: NodePath = "../../SelectionLayer/SelectionBox"
 
 var selection_box: Control
 var selected_particles: Array[Node2D] = []
