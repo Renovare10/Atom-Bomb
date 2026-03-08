@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://3u6fvqq186i8"]
+
+[ext_resource type="Script" uid="uid://cc4pipqamp1ws" path="res://energy/energy.gd" id="1_hhab1"]
+[ext_resource type="Texture2D" uid="uid://dwt7ih4l5bb58" path="res://energy/energy.png" id="2_x2fve"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rro36"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2p6o8"]
+radius = 5.0990195
+
+[node name="Energy" type="RigidBody2D" unique_id=590806236 groups=["enemy_energy"]]
+modulate = Color(0.9934129, 0, 0.23579633, 1)
+physics_material_override = SubResource("PhysicsMaterial_rro36")
+script = ExtResource("1_hhab1")
+speed = 300.0
+lifetime = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821221477]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_2p6o8")
+
+[node name="Energy" type="Sprite2D" parent="." unique_id=922419586]
+scale = Vector2(0.007, 0.007)
+texture = ExtResource("2_x2fve")
+
+[node name="lifetime_timer" type="Timer" parent="." unique_id=14966728]
+wait_time = 20.0
+one_shot = true
+autostart = true
