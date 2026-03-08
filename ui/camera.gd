@@ -97,7 +97,7 @@ func _process(delta: float) -> void:
 	pan_input.y = Input.get_action_strength("ui_down")  - Input.get_action_strength("ui_up")
 
 	var effective_zoom = zoom_goal.x   # or camera.zoom.x if you prefer
-	var pan_speed = baseKeyboardPanSpeed / effective_zoom
+	var pan_speed = baseKeyboardPanSpeed / effective_zoom * (2.0 if Input.is_key_pressed(KEY_SHIFT) else 1.0)
 
 	position_goal += pan_input * pan_speed * delta
 	# ───────────────────────────────────────────────

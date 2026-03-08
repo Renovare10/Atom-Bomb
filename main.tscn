@@ -6,5 +6,6 @@
 [node name="Main" type="Node2D" unique_id=866761514]
 
 [node name="Camera" parent="." unique_id=1392341737 instance=ExtResource("2_0xm2m")]
+zoom = Vector2(0.5, 0.5)
 
 [node name="Core" parent="." unique_id=72824533 instance=ExtResource("1_ig7tw")]
