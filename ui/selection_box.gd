@@ -18,9 +18,15 @@ func _gui_input(event: InputEvent) -> void:
 			queue_redraw()
 		else:
 			if is_dragging:
-				_process_selection()
+				if (drag_current - drag_start).length_squared() < 100:  # ~10 pixels in any direction
+					# Quick click → clear selection
+					selection_made.emit(Rect2())
+				else:
+					# Actual drag → normal selection
+					_process_selection()
 				is_dragging = false
 				queue_redraw()
+
 	elif event is InputEventMouseMotion and is_dragging:
 		drag_current = get_local_mouse_position()
 		queue_redraw()
@@ -58,5 +64,4 @@ func _draw() -> void:
 	var box_rect: Rect2 = Rect2(min_pos, rect_size)
 	
 	# Thick purple outline only (no fill)
-	
 	draw_rect(box_rect, border_color, false, border_thickness)
