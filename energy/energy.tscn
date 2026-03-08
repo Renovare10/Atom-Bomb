@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_2p6o8"]
 radius = 5.0990195
 
-[node name="Energy" type="Area2D" unique_id=310349823]
+[node name="Energy" type="Area2D" unique_id=310349823 groups=["friendly_energy"]]
 modulate = Color(0.47599506, 0.721965, 0.9999941, 1)
 script = ExtResource("1_rro36")
 speed = 300.0

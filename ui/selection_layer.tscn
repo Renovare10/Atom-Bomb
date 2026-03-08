@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cdjpbrp8fnncn"]
+
+[ext_resource type="Script" uid="uid://bajmankfo040o" path="res://ui/selection_box.gd" id="1_8mm4w"]
+
+[node name="SelectionLayer" type="CanvasLayer" unique_id=1727978364]
+
+[node name="SelectionBox" type="Control" parent="." unique_id=1854847718]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_8mm4w")
+border_thickness = 1.0
+border_color = Color(0.627451, 0.627451, 0.627451, 1)
