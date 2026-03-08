@@ -12,7 +12,7 @@ func _ready() -> void:
 
 
 func _spawn_energy_ball() -> void:
-	var ball = energy_ball_scene.instantiate() as Area2D
+	var ball = energy_ball_scene.instantiate() as RigidBody2D
 	add_child(ball)
 	ball.global_position = global_position
 	
