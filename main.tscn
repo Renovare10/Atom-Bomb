@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cfsqgpoc4c43v" path="res://ui/camera.tscn" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://ckphaxa2ko27l" path="res://ui/selection_manager.gd" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://8ean77gjpppr" path="res://command_manager.gd" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dnef81mecie7c" path="res://levels/level_1.tscn" id="6_7mycd"]
 
 [node name="Main" type="Node2D" unique_id=866761514]
 
@@ -22,3 +23,7 @@ script = ExtResource("4_1bvp3")
 
 [node name="CommandManager" type="Node2D" parent="ParticleManager" unique_id=691856020]
 script = ExtResource("5_lquwl")
+
+[node name="Level_1" parent="." unique_id=1447589477 instance=ExtResource("6_7mycd")]
+position = Vector2(157, 74)
+rotation = -0.11292112
