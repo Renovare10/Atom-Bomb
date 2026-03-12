@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cxcyuav7xscq2"]
 
 [ext_resource type="PackedScene" uid="uid://cdjpbrp8fnncn" path="res://ui/selection_layer.tscn" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://blj662s0vna7p" path="res://core/core.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cfsqgpoc4c43v" path="res://ui/camera.tscn" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://ckphaxa2ko27l" path="res://ui/selection_manager.gd" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://8ean77gjpppr" path="res://command_manager.gd" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dnef81mecie7c" path="res://levels/level_1.tscn" id="6_7mycd"]
-[ext_resource type="PackedScene" uid="uid://3u6fvqq186i8" path="res://energy/enemy_energy.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://b4dau2dgckf1g" path="res://core/enemy_core.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://cif6xm2n4rbv0" path="res://core/friendly_core.tscn" id="8_5vw27"]
 
 [node name="Main" type="Node2D" unique_id=866761514]
 
@@ -14,12 +14,6 @@
 
 [node name="Camera" parent="." unique_id=1392341737 instance=ExtResource("2_0xm2m")]
 zoom = Vector2(0.5, 0.5)
-
-[node name="Core" parent="." unique_id=72824533 instance=ExtResource("1_ig7tw")]
-
-[node name="Core2" parent="." unique_id=269778615 instance=ExtResource("1_ig7tw")]
-position = Vector2(1500, -6)
-energy_ball_scene = ExtResource("7_272bh")
 
 [node name="ParticleManager" type="Node2D" parent="." unique_id=273756657]
 
@@ -32,3 +26,8 @@ script = ExtResource("5_lquwl")
 [node name="Level_1" parent="." unique_id=1447589477 instance=ExtResource("6_7mycd")]
 position = Vector2(157, 74)
 rotation = -0.11292112
+
+[node name="Friendly_Core" parent="." unique_id=72824533 instance=ExtResource("8_5vw27")]
+
+[node name="Enemy_Core" parent="." unique_id=1705624908 instance=ExtResource("7_272bh")]
+position = Vector2(1495, 0)
