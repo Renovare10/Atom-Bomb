@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cdjpbrp8fnncn" path="res://ui/selection_layer.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cfsqgpoc4c43v" path="res://ui/camera.tscn" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://ckphaxa2ko27l" path="res://ui/selection_manager.gd" id="4_1bvp3"]
-[ext_resource type="Script" uid="uid://8ean77gjpppr" path="res://command_manager.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://8ean77gjpppr" path="res://ui/command_manager.gd" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dnef81mecie7c" path="res://levels/level_1.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://b4dau2dgckf1g" path="res://core/enemy_core.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://cif6xm2n4rbv0" path="res://core/friendly_core.tscn" id="8_5vw27"]
@@ -27,7 +27,7 @@ script = ExtResource("5_lquwl")
 position = Vector2(157, 74)
 rotation = -0.11292112
 
-[node name="Friendly_Core" parent="." unique_id=72824533 instance=ExtResource("8_5vw27")]
+[node name="Enemy_Core" parent="." unique_id=170661782 instance=ExtResource("7_272bh")]
+position = Vector2(1485, 0)
 
-[node name="Enemy_Core" parent="." unique_id=1705624908 instance=ExtResource("7_272bh")]
-position = Vector2(1495, 0)
+[node name="Friendly_Core" parent="." unique_id=72824533 instance=ExtResource("8_5vw27")]
