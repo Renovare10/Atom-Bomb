@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2axv64tlktgt" path="res://core/core.gd" id="1_dl57r"]
 [ext_resource type="Texture2D" uid="uid://6dma4lsfialp" path="res://core/wcircle.png" id="1_mdl8m"]
+[ext_resource type="Script" uid="uid://crl7uxb0c6isr" path="res://core/energy_spawner.gd" id="3_evk0v"]
 
 [node name="Core" type="Node2D" unique_id=72824533]
 script = ExtResource("1_dl57r")
@@ -9,3 +10,6 @@ script = ExtResource("1_dl57r")
 [node name="Wcircle" type="Sprite2D" parent="." unique_id=673956422]
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("1_mdl8m")
+
+[node name="EnergySpawner" type="Node2D" parent="." unique_id=1032397796]
+script = ExtResource("3_evk0v")

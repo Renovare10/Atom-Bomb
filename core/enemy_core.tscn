@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://3u6fvqq186i8" path="res://energy/enemy_energy.tscn" id="2_22kw0"]
 
 [node name="Enemy_Core" unique_id=72824533 instance=ExtResource("1_fnedf")]
-energy_ball_scene = ExtResource("2_22kw0")
 
 [node name="Wcircle" parent="." index="0" unique_id=673956422]
 modulate = Color(0.84348196, 0.7012479, 0.71687037, 1)
+
+[node name="EnergySpawner" parent="." index="1" unique_id=1032397796]
+energy_ball_scene = ExtResource("2_22kw0")
