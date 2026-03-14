@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cpo25kxj3ku5g" path="res://ui/upgrade_menu.gd" id="1_82rw7"]
 
+[sub_resource type="Theme" id="Theme_82rw7"]
+default_font_size = 38
+
 [node name="UpgradeMenu" type="CanvasLayer" unique_id=1012230545]
 script = ExtResource("1_82rw7")
 
@@ -29,4 +32,6 @@ offset_top = 227.0
 offset_right = 966.0
 offset_bottom = 487.0
 focus_mode = 0
-text = "1 Faster energy gen"
+theme = SubResource("Theme_82rw7")
+text = "Faster Energy Gen
+1 Energy"
