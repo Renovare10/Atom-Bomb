@@ -1,3 +1,4 @@
+# health_ring.gd
 extends Node2D
 
 @export var ring_radius: float = 80.0
@@ -9,18 +10,25 @@ extends Node2D
 
 var current_health: float = 1.0
 var fade_tween: Tween = null
+var core_health_component: Node = null
 
 func _ready() -> void:
 	z_index = 1
 	modulate.a = 0.0
-	var core_health = get_parent().get_node("CoreHealth")
-	if core_health:
-		core_health.health_changed.connect(_on_health_changed)
-		current_health = float(core_health.current_health) / core_health.max_health
 
-func _on_health_changed(new_health: int) -> void:
-	var max_health = 10
-	var new_ratio = float(new_health) / max_health
+func set_core_health(health_node: Node) -> void:
+	core_health_component = health_node
+	if core_health_component:
+		if not core_health_component.health_changed.is_connected(_on_health_changed):
+			core_health_component.health_changed.connect(_on_health_changed)
+		current_health = core_health_component.get_health_ratio()
+		queue_redraw()
+
+func _on_health_changed(_new_health: int) -> void:
+	if not core_health_component:
+		return
+	
+	var new_ratio = core_health_component.get_health_ratio()
 	
 	if new_ratio < current_health:
 		modulate.a = 1.0

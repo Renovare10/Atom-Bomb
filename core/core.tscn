@@ -28,6 +28,7 @@ energy_ball_scene = ExtResource("4_73hob")
 
 [node name="CoreHealth" type="Node" parent="." unique_id=1036135637]
 script = ExtResource("5_6aukt")
+max_health = 20
 
 [node name="HealthRing" type="Node2D" parent="." unique_id=1894801343]
 script = ExtResource("6_y66j2")
