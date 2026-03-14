@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://crl7uxb0c6isr" path="res://core/energy_spawner.gd" id="3_evk0v"]
 [ext_resource type="PackedScene" uid="uid://bsuv4vuyjy4nq" path="res://energy/energy.tscn" id="4_73hob"]
 [ext_resource type="Script" uid="uid://dl45fe8dwpqhs" path="res://core/core_health.gd" id="5_6aukt"]
+[ext_resource type="Script" uid="uid://hnxvjwt74kkc" path="res://core/health_ring.gd" id="6_y66j2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_73hob"]
 
@@ -27,5 +28,8 @@ energy_ball_scene = ExtResource("4_73hob")
 
 [node name="CoreHealth" type="Node" parent="." unique_id=1036135637]
 script = ExtResource("5_6aukt")
+
+[node name="HealthRing" type="Node2D" parent="." unique_id=1894801343]
+script = ExtResource("6_y66j2")
 
 [connection signal="body_entered" from="Area2D" to="CoreHealth" method="_on_area_2d_body_entered"]
