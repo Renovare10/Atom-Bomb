@@ -19,6 +19,8 @@ func _ready() -> void:
 	
 	if health_ring and core_health:
 		health_ring.set_core_health(core_health)
+		
+	add_to_group("cores")
 
 func _on_health_changed(_new_health: int) -> void:
 	var tween = create_tween()

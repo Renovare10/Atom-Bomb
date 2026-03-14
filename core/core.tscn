@@ -9,7 +9,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_73hob"]
 
-[node name="Core" type="Node2D" unique_id=72824533]
+[node name="Core" type="Node2D" unique_id=72824533 groups=["cores"]]
 script = ExtResource("1_dl57r")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=276570538]

@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://b4dau2dgckf1g"]
 
 [ext_resource type="PackedScene" uid="uid://blj662s0vna7p" path="res://core/core.tscn" id="1_fnedf"]
+[ext_resource type="Script" uid="uid://cjm3xaejrqtpa" path="res://core/enemy_behavior.gd" id="2_22kw0"]
 
 [node name="Enemy_Core" unique_id=72824533 instance=ExtResource("1_fnedf")]
 team = &"red"
 core_color = Color(1, 0.5622355, 0.5178473, 1)
+
+[node name="EnemyBehavior" type="Node" parent="." index="5" unique_id=801250488]
+script = ExtResource("2_22kw0")
