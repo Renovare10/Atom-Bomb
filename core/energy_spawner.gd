@@ -12,7 +12,12 @@ func _ready() -> void:
 
 func _spawn_energy_ball() -> void:
 	var ball = energy_ball_scene.instantiate() as RigidBody2D
-	add_child(ball)
+	var container = get_tree().get_first_node_in_group("energy_balls")
+	if container:
+		container.add_child(ball)
+	else:
+		get_tree().current_scene.add_child(ball)
+	
 	ball.global_position = global_position
 	
 	var core = get_parent() as Node2D

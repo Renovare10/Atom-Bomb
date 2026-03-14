@@ -31,3 +31,5 @@ rotation = -0.11292112
 position = Vector2(1485, 0)
 
 [node name="Friendly_Core" parent="." unique_id=72824533 instance=ExtResource("8_5vw27")]
+
+[node name="EnergyBalls" type="Node2D" parent="." unique_id=366575723 groups=["energy_balls"]]
