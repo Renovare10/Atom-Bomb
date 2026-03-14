@@ -13,6 +13,7 @@
 [node name="Main" type="Node2D" unique_id=866761514]
 
 [node name="UpgradeMenu" parent="." unique_id=1012230545 instance=ExtResource("1_5vw27")]
+visible = false
 
 [node name="SelectionLayer" parent="." unique_id=1727978364 instance=ExtResource("1_h2yge")]
 script = ExtResource("3_kek77")
