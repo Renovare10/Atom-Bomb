@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://6ibnbmmfhiaj"]
+
+[ext_resource type="Script" uid="uid://cpo25kxj3ku5g" path="res://ui/upgrade_menu.gd" id="1_82rw7"]
+
+[node name="UpgradeMenu" type="CanvasLayer" unique_id=1012230545]
+script = ExtResource("1_82rw7")
+
+[node name="Control" type="Control" parent="." unique_id=1615396495]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=627997749]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0870161, 0.08701607, 0.08701608, 1)
+
+[node name="Button" type="Button" parent="Control" unique_id=1309229274]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 227.0
+offset_right = 966.0
+offset_bottom = 487.0
+focus_mode = 0
+text = "1 Faster energy gen"
